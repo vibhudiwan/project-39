@@ -116,7 +116,9 @@ function draw() {
     if(sun.x<trex.x-1000){
       sun.x=trex.x+3000;
       moon.visible=true;
+      if(frameCount%100===0){
       cloudsGroup.destroyEach();
+      }
       fill("white")
       textSize(20);
       textFont("Comic Sans MS");
