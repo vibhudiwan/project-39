@@ -96,6 +96,7 @@ function setup() {
 
 function draw() {
   //trex.debug = true;
+  
   background(bgImg);
   fill("black")
   textSize(20);
@@ -103,6 +104,7 @@ function draw() {
   text("Score: "+ score, trex.x+250, height/10);
   text("HI: "+ localStorage[0], trex.x+150, height/10);
   console.log(ground.width);
+  text("TRY REACHING AT LEAST 1500..",trex.x+450,height/9);
   trex.shapeColour="red";
  
   
