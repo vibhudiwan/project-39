@@ -114,14 +114,14 @@ function draw() {
    console.log(sun.x);
     //ground.x=trex.x;
     if(sun.x<trex.x-1000){
+      sun.x=trex.x+3000;
+      moon.visible=true;
+      cloudsGroup.destroyEach();
       fill("white")
       textSize(20);
       textFont("Comic Sans MS");
       text("Score: "+ score, trex.x+250, height/10);
       text("HI: "+ localStorage[0], trex.x+150, height/10);
-      sun.x=trex.x+3000;
-      moon.visible=true;
-      cloudsGroup.destroyEach();
       
     }else{
       sun.velocityX=-2;
