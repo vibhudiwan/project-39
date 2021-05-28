@@ -188,7 +188,11 @@ function draw() {
   
   ground.depth = trex.depth;
   trex.depth = trex.depth + 1;
-  
+      fill("white")
+      textSize(20);
+      textFont("Comic Sans MS");
+      text("Score: "+ score, trex.x+250, height/10);
+      text("HI: "+ localStorage[0], trex.x+150, height/10);
   drawSprites();
 }
 
