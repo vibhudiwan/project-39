@@ -116,7 +116,7 @@ function draw() {
     if(sun.x<trex.x-1000){
       sun.x=trex.x+3000;
       moon.visible=true;
-      if(frameCount%100===0){
+      if(frameCount%1===0){
       cloudsGroup.destroyEach();
       }
       fill("white")
