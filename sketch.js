@@ -145,7 +145,7 @@ function draw() {
         
          // camera.position.x=displayWidth/2;
          // camera.position.x=trex.x;
-          camera.position.x=trex.x+200;
+          camera.position.x=trex.x+150;
         
   
     trex.velocityY = trex.velocityY + 0.8;
