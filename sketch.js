@@ -5,7 +5,7 @@ var gameState = PLAY;
 var bgImg;
 var sun, sunImg;
 var trex, trex_running, trex_collided;
-var ground, invisibleGround, groundImage,nana;
+var ground, invisibleGround, groundImage,nana,falseover;
 
 var jump, collide;
 
@@ -47,7 +47,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(windowWidth-500, windowHeight);
+  createCanvas(windowWidth-300, windowHeight);
   
   moon = createSprite(580, 350);
   moon.addImage(moonI);
@@ -90,7 +90,8 @@ function setup() {
   cloudsGroup = new Group();
   obstaclesGroup = new Group();
 
-  
+  falseover = createSprite(trex-100,0,300,windowHeight);
+  falseover.visible=true;
   score = 0;
 }
 
@@ -106,6 +107,7 @@ function draw() {
   console.log(ground.width);
   text("TRY REACHING AT LEAST 1500..",trex.x+450,height/10);
   trex.shapeColour="red";
+  falseover.shapecolor="white";
  
   
   if (gameState===PLAY){
