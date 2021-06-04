@@ -47,7 +47,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(200+400, height-150);
+  createCanvas(1000,5000);
   
   moon = createSprite(580, 350);
   moon.addImage(moonI);
