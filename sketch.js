@@ -15,7 +15,7 @@ var gameOver, restart;
 
 
 function preload(){
-  jumpSound = loadSound("sounds/jump.wav")
+ /* jumpSound = loadSound("sounds/jump.wav")
   collidedSound = loadSound("sounds/collided.wav")
   
   backgroundImg = loadImage("backgroundImg.png")
@@ -34,7 +34,7 @@ function preload(){
   obstacle4 = loadImage("obstacle4.png");
   
   gameOverImg = loadImage("gameOver.png");
-  restartImg = loadImage("restart.png");
+  restartImg = loadImage("restart.png");*/
 }
 
 function setup() {
