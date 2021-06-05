@@ -41,14 +41,14 @@ function setup() {
   createCanvas(windowWidth+300, windowHeight+300);
   
   sun = createSprite(width-50,100,10,10);
-  sun.addAnimation("sun", sunAnimation);
+  //sun.addAnimation("sun", sunAnimation);
   sun.scale = 0.1
   
   trex = createSprite(50,height-70,20,50);
   
   
-  trex.addAnimation("running", trex_running);
-  trex.addAnimation("collided", trex_collided);
+ // trex.addAnimation("running", trex_running);
+ // trex.addAnimation("collided", trex_collided);
   trex.setCollider('circle',0,0,350)
   trex.scale = 0.08
   // trex.debug=true
@@ -57,21 +57,21 @@ function setup() {
   invisibleGround.shapeColor = "#f4cbaa";
   
   ground = createSprite(width/2,height,width,2);
-  ground.addImage("ground",groundImage);
+//  ground.addImage("ground",groundImage);
   ground.x = width/2
   ground.velocityX = -(6 + 3*score/100);
   
   gameOver = createSprite(width/2,height/2- 50);
-  gameOver.addImage(gameOverImg);
+  //gameOver.addImage(gameOverImg);
   
   restart = createSprite(width/2,height/2);
-  restart.addImage(restartImg);
+  //restart.addImage(restartImg);
   
-  gameOver.scale = 0.5;
-  restart.scale = 0.1;
+ // gameOver.scale = 0.5;
+ // restart.scale = 0.1;
 
-  gameOver.visible = false;
-  restart.visible = false;
+ // gameOver.visible = false;
+ // restart.visible = false;
   
  
   // invisibleGround.visible =false
@@ -111,7 +111,7 @@ function draw() {
     spawnObstacles();
   
     if(obstaclesGroup.isTouching(trex)){
-        collidedSound.play()
+        //collidedSound.play()
         gameState = END;
     }
   }
@@ -126,7 +126,7 @@ function draw() {
     cloudsGroup.setVelocityXEach(0);
     
     //change the trex animation
-    trex.changeAnimation("collided",trex_collided);
+    //trex.changeAnimation("collided",trex_collided);
     
     //set lifetime of the game objects so that they are never destroyed
     obstaclesGroup.setLifetimeEach(-1);
@@ -147,7 +147,7 @@ function spawnClouds() {
   if (frameCount % 60 === 0) {
     var cloud = createSprite(width+20,height-300,40,10);
     cloud.y = Math.round(random(100,220));
-    cloud.addImage(cloudImage);
+   // cloud.addImage(cloudImage);
     cloud.scale = 0.5;
     cloud.velocityX = -3;
     
@@ -200,7 +200,7 @@ function reset(){
   obstaclesGroup.destroyEach();
   cloudsGroup.destroyEach();
   
-  trex.changeAnimation("running",trex_running);
+ // trex.changeAnimation("running",trex_running);
   
   score = 0;
   
